@@ -3,5 +3,5 @@
 		each kiled evil you will gane 10 point
 		each kiled angel you lose 1 heart
 
-3.Best browser: Google Chrome
+3.Best browser: Google Chrom
 4.Support all mobile and tablet sizes

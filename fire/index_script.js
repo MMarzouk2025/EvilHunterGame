@@ -267,11 +267,12 @@ function switchLevel(){
 
 function shoot(){
 	if (gameState == "playing") {
+		
 		var shotSound = document.getElementById("audioShoot");
 		shotSound.pause();
-		shotSound.currentTime = 250;
+		shotSound.currentTime = 0;
 		shotSound.play();
-
+		
 		var playArea = document.getElementById("background_container");
 		var boomEffect = document.createElement("img");
 		boomEffect.src = "../res/shot.png";
