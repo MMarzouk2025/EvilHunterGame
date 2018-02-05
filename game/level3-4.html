@@ -1,0 +1,294 @@
+﻿<!Doctype html>
+<html>
+<head>
+	<title>Game</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<!--<link rel="stylesheet" href="res/index_style.css" />-->
+	<link rel="stylesheet" href="res/Night.css" id="levelStyle"/>
+
+	<style type="text/css">
+		html, body {
+			cursor:url("res/img/cross_cur.png") 23 18, auto;
+		    width: 100%;
+		    height: 100%;
+		    margin: 0;
+		    padding: 0;
+		    overflow: hidden;
+		}
+	</style>
+
+</head>
+
+<body id= "background_container" onclick="shoot();">
+	
+    
+    <!-- SWITCH VIEW -->
+    <div id="switchView" style="text-align: center;
+                                position: absolute;
+                                top: 5%;
+                                left: 20%;
+                                right: 50%;
+                                bottom: 5%;
+                                width: 60%;
+                                height: 85%;
+                                background:url(res/img/woodbg.png) no-repeat;
+                                background-size: cover;
+                                padding: 5px;
+                                z-index: 10;
+                                visibility: hidden;
+                                display: block;
+                                border-radius: 2px;
+    ">
+        <img  id="switchWord" src="res/img/over.png" style="
+    width:70%; max-width : 70%; display: inline-block; padding-top:5%; height: 15%; "/>
+        <img  id="switchAvatar" src="res/img/cryAngel.png" style="
+    width:28%; 
+    height:30%;
+    margin-top: 5%;
+    margin-left: 35%;
+    margin-bottom: 7%;
+    display: block"/>
+        <div class="switchDiv" style="font-size: 2.5vw;
+    color: firebrick;
+    font-family:fantasy;
+    margin: 2%;
+" >Your Score: 
+            <span class="switchSpan" id="switchScore" style="color: #F1C40F;
+    background-color: rgba(250,250,250, 1);
+    border-radius: 5px;
+    padding: 2px;
+">100</span>
+        </div>
+        <div class="switchDiv" style="font-size: 2.5vw;
+    color: firebrick;
+    font-family:fantasy;
+">Your time:
+            <span class="switchSpan" id="switchTime" style="color: #F1C40F;
+    background-color: rgba(250,250,250, 1);
+    border-radius: 5px;
+    padding: 2px;
+">1:05</span>
+        </div>
+       
+    </div>
+    <!-- END OF SWITCH VIEW -->
+				
+	
+					<!-- DASHBOARD -->
+	<center>
+	<div id="dashboard">
+        <div class="levelItem" onclick="event.stopPropagation();">	
+            <img class="levelIcon" src="res/img/score.png" style="margin-right: 5%;"/> 
+            <span id="score" style="font-size: 1.75vmax; color: #8f3424;">0</span>
+        </div>
+        
+        <div class="levelItem" onclick="event.stopPropagation();">
+            	<img class="levelIcon" src="res/img/timer.png" style="margin-right: 5%"/> 
+            	<span id="timer" style="font-size: 1.75vmax; color: #8f3424;">0</span>
+        </div>
+
+        <div id="heart" class="levelItem" onclick="event.stopPropagation();" style="padding-top: 0.7%; padding-bottom: 0.35%">
+            <img class="levelIcon" name="hearts" src="res/img/heart.png"/>
+            <img class="levelIcon" name="hearts" src="res/img/heart.png"/>
+            <img class="levelIcon" name="hearts" src="res/img/heart.png"/>
+        </div>
+    </div>     
+	</center>
+	<!-- END OF DASHBOARD -->
+	
+					<!-- WARNING MESSAGE -->
+	<div id="warning-message"> You must rotate your Phone </div>
+	<!-- END OF WARNING MESSAGE -->
+	
+    
+					<!-- MY VIEW -->
+	<div id="wrapper">
+    
+		<div id="sky">
+	
+			<div id="stars">
+		
+					<!-- ASTEROID -->
+				
+					<div class="asteroid"  onclick="event.stopPropagation();">
+						<div class="asteroid-head"></div>
+						<div class="asteroid-tail"></div>
+					</div>
+
+					<div class="asteroid a2">
+						<div class="asteroid-head"></div>
+						<div class="asteroid-tail"></div>
+					</div>
+				<!-- END of ASTEROID -->
+	
+					<!-- MOON -->	
+			
+					<div id="moon"  class="sun" onclick="event.stopPropagation();">
+						<div class="crater"></div>
+						<div class="crater2"></div>
+						<div class="crater3"></div>
+						<div class="crater4"></div>
+						<div class="crater5"></div>
+						<div class="crater6"></div>
+						<div class="crater7"></div>
+					</div>
+				<!-- END of MOON -->
+		
+			</div>
+			<!-- END OF STARS -->
+	
+					<!-- HOUSE -->
+		
+			<div class="house" id="img8">
+				<div class="roof" id="img9"></div>
+				<div class="uproof" id="img10"></div>
+				
+				<div id="eimg11" class="window">
+					<div class="line1"></div><div class="line2"></div>
+				</div>
+				
+				<div id="eimg12" class="window window2">
+					<div class="line1"></div><div class="line2"></div>
+				</div>
+			</div>
+			<!-- END of HOUSE -->
+
+	
+					<!-- GRASS -->
+			
+			<div class="grass"></div>
+			<div class="grass g1"></div>
+			<div class="grass g2"></div>
+			<div class="grass g3"></div>
+			<div class="grass g4"></div>
+			<div class="grass g5"></div>
+			<div class="grass g6"></div>
+			<div class="grass g7"></div>
+			<div class="grass g8"></div>
+			<div class="grass g9"></div>
+			<div class="grass g10"></div>
+			<div class="grass g11"></div>
+			<div class="grass g12"></div>
+			<div class="grass g13"></div>
+			<div class="grass g14"></div>
+			<div class="grass g15"></div>
+			<div class="grass g16"></div>
+			<div class="grass g17"></div>
+			<div class="grass g18"></div>
+			<div class="grass g19"></div>
+			<div class="grass g20"></div>
+			<div class="grass g21"></div>
+			<div class="grass g22"></div>
+			<div class="grass g23"></div>
+			<div class="grass g24"></div>
+			<div class="grass g25"></div>
+			<div class="grass g26"></div>
+			<div class="grass g27"></div>
+			<div class="grass g28"></div>
+			<div class="grass g29"></div>
+			<div class="grass g30"></div>
+			<div class="grass g31"></div>
+			<div class="grass g32"></div>
+			<div class="grass g33"></div>
+			<div class="grass g34"></div>
+			<div class="grass g35"></div>
+			<div class="grass g36"></div>
+			<div class="grass g37"></div>
+			
+			<div class="grassL"></div>
+			<div class="grassL gL1"></div>
+			<div class="grassL gL2"></div>
+			<div class="grassL gL3"></div>
+			<div class="grassL gL4"></div>
+			<div class="grassL gL5"></div>
+			<div class="grassL gL6"></div>
+			<div class="grassL gL7"></div>
+			<div class="grassL gL8"></div>
+			<div class="grassL gL9"></div>
+			<div class="grassL gL10"></div>
+			<div class="grassL gL11"></div>
+			<div class="grassL gL12"></div>
+			<div class="grassL gL13"></div>
+			<div class="grassL gL14"></div>
+			<div class="grassL gL15"></div>
+			<div class="grassL gL16"></div>
+			<div class="grassL gL17"></div>
+			<div class="grassL gL18"></div>
+			<div class="grassL gL19"></div>
+			<div class="grassL gL20"></div>
+			<div class="grassL gL21"></div>
+			<div class="grassL gL22"></div>
+			<div class="grassL gL23"></div>
+			<div class="grassL gL24"></div>
+			<div class="grassL gL25"></div>
+			<div class="grassL gL26"></div>
+			<div class="grassL gL27"></div>
+			<div class="grassL gL28"></div>
+			<div class="grassL gL29"></div>
+			<div class="grassL gL30"></div>
+			<div class="grassL gL31"></div>
+			<div class="grassL gL32"></div>
+			<div class="grassL gL33"></div>
+			<div class="grassL gL34"></div>
+			<div class="grassL gL35"></div>
+			<div class="grassL gL36"></div>
+			<div class="grassL gL37"></div>
+			<div class="grassL gL38"></div>
+			<div class="grassL gL39"></div>
+			<div class="grassL gL40"></div>
+			<div class="grassL gL41"></div>
+			<div class="grassL gL42"></div>
+			
+			<!-- END OF GRASS -->
+		
+		</div>
+		<!-- END OF SKY -->
+		
+		<!-- ROCKS -->
+		<div id="rock">
+			<div id="img4" class="rock"></div>
+			<div id="img5" class="rock rock1"></div>
+			<div id="img6" class="rock rock2"></div>
+			<div id="img7" class="rock rock3"></div>
+		</div>
+		<!-- END OF ROCKS -->
+    
+		<!-- CLOUDS -->
+		<div id="clouds">
+			<img id="img1" src="res/img/cloud2.png" />
+			<img id="img2" src="res/img/cloud2.png"/>
+			<img id="img3" src="res/img/cloud2.png" />
+			<img class="img4" src="res/img/cloud2.png" />
+			<img class="img5" src="res/img/cloud2.png" />
+			<img class="img6" src="res/img/cloud2.png"/>
+			<img class="img7" src="res/img/cloud2.png" />
+			<img class="img8" src="res/img/cloud2.png" />
+		</div>
+		<!-- END OF CLOUDS -->
+	
+	</div>
+
+	<!-- //////////////////////// CONTROLS ////////////////////////-->
+	<!-- ********************************************************* -->
+	<img src="../res/play.png" style=" position:fixed; right:3%; top: 3%; width:3%; height:5%; cursor: default; z-index: 10;" 
+		id="playSound" onclick= "switchSound(this); event.stopPropagation();"/>
+	<audio loop id= "gameSound">
+		<source src="../res/scaryGame.mp3" type="audio/ogg" >
+	</audio>
+	<img src="../res/pause_game.png" style=" position:fixed; right:8%; top: 3%; width:3%; height:5%; cursor: default; z-index: 10;" 
+		id="pauseGame" onclick= "pausePlaySwitch(); event.stopPropagation();"/>
+	<!-- ********************************************************* -->
+	<!-- ********************************************************* -->
+
+	<div id="pauseWord" style="font-family: 'Times New Roman'; font-size: 12vh; font-weight: bold; 
+			text-align: center; color: red; z-index: 11;position: absolute;top: 45%;left: 35%">
+		<span style="text-shadow: 5px 3px 5px #888888;">PAUSED</span>
+	</div>
+	
+	<audio id="audioShoot"><source src="res/sounds/shootingsound.mp3"  type="audio/mp3"/></audio>
+
+	<script type="text/javascript" src="level3-4Script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>

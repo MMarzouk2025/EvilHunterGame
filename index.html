@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Evil Hunter</title>
+		
+		<link rel="stylesheet" href="home_style.css">
+		<script src="home_script.js"></script>
+    </head>
+</html>
+
+<body>
+<!-- --------------------------------- welcome page ----------------------------------- -->
+	<center>
+		<div class="logo-holder">
+            <p class="logo">
+                <span>E  </span>
+				<span>v  </span>
+				<span>i  </span>
+				<span>l  </span>
+                <span style="margin-left: 0.75vw;"> h  </span>
+                <span>u  </span>
+                <span>n  </span>
+                <span>t  </span>
+                <span>e  </span>
+                <span>r  </span>
+            </p>
+            <a class="play-button" href="fire/game.html" onclick="game.start()">Play</a>
+            <h4 class="hint"><span>Hint:</span> Shoot devils and avoid angels</h4>
+        </div> 
+	</center>  
+	
+	<div class="story">
+		<img src="home_res/before.png" id="storyImg"  onclick="showStory()" style="cursor: pointer;" />
+	</div>
+	
+	<div>
+		<img id="angelGirl" class="animi" src="home_res/angelGirl.png"  onmouseover="die(this)" onmouseout="live(this)"/> 
+		<img id="angelMan"  class="animi" src="home_res/angelMan.png"   onmouseover="die(this)" onmouseout="live(this)"/>
+		<img id="devilGirl" class="animi" src="home_res/devilGirl.png"  onmouseover="die(this)" onmouseout="live(this)"/>
+		<img id="devilMan"  class="animi" src="home_res/devilMan.png"   onmouseover="die(this)" onmouseout="live(this)"/>
+	</div>
+	<!-- ---------------------------- popup story ------------------------------------- -->
+	<dialog open id="disDialog" class="dilg">
+		<iframe src="story/story.html" width="95%" height="95%" frameborder="0" scrolling="no"></iframe>
+	</dialog>
+	
+	<!-- ------------------------------- home sound ------------------------------- -->
+	<img src="home_res/play1.png" style=" position:fixed; left:2%; top: 4%;width:3.5%; height:5%" id= "play" onclick= "switchSound(this)"/>
+	
+	<audio autoplay loop id= "gameSound">
+		<source src="home_res/FunnyGame.mp3" type="audio/ogg" >
+	</audio>
+	
+		<!-- ------------------------------- story sound ------------------------------- -->
+		
+	<audio loop id= "storySound">
+		<source src="home_res/story.mp3" type="audio/ogg" >
+	</audio>
+	
+	<!-- ------------------------------ display of SHOOTER ----------------------------- --> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+	<script>
+        $('.logo span').hide().appendTo('.logo').each(function (i) {
+        $(this).delay(350 * i).fadeIn();
+        });
+	</script>
+
+</body>

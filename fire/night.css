@@ -1,0 +1,395 @@
+    /* ============================================================================================== 
+    Nick Mkrtchyan
+    https://www.facebook.com/sonick.pk
+    http://www.Mkrtchyan.zz.mu
+    ================================================================================================= */
+    *
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+#warning-message { 
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(#00111e 30%, #033d5e);
+    overflow: hidden;
+    color: white;
+    font-size: 70px;
+    padding-left: 10%;
+    padding-top: 70%;
+    position: fixed;
+    text-shadow: #4da6ff;
+}
+
+@media only screen and (orientation:portrait){
+
+#wrapper { 
+    display:none; 
+}
+
+#warning-message { 
+    display:block; 
+}
+
+}
+
+@media only screen and (orientation:landscape){
+
+    #warning-message { display:none; }
+
+}
+
+@media only screen and (orientation:landscape){
+
+  #background_container {
+
+     -webkit-transform: rotate(0deg);
+
+     -moz-transform: rotate(0deg);
+
+     -o-transform: rotate(0deg);
+
+     -ms-transform: rotate(0deg);
+
+     transform: rotate(0deg);
+
+  }
+    
+    body
+    {
+  background:#000 url(../res/stars.png) repeat top center;
+  z-index:0;
+    }
+
+    #clouds
+    {
+        margin-top: 2%;
+
+        user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        background-size:cover;
+    }
+
+    
+    .lua {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  width: 10%;
+  height: 19%;
+  border-radius: 50%;
+  box-shadow: 0 0 160px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
+  background-color: #fff;
+  animation-name: lua;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+.lua .textura {
+  background-image: url(https://raw.githubusercontent.com/interaminense/starry-sky/master/src/img/bgMoon.png);
+  background-position: center;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0.4;
+}
+ #clouds
+{
+    margin-top: 2%;
+    z-index: 3;
+}
+#img1,#img3,#img4,#img6,#img7,#img9,
+#img10,#img12,#img13,#img15,#img16,
+#img18,#img19,#img21,#img22,#img24,
+#img25,#img27,#img28,#img30
+{
+    height:13%;
+    width: 10%;
+}
+
+#img2, #img5,#img8,#img11,#img14,#img17,
+#img20,#img23,#img26,#img29
+{
+    height:15%;
+    width: 15%;
+}
+
+#img1
+{   
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 11%;
+    margin-right: -8%;
+}
+
+#img2
+{
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 12%;
+}
+
+#img3
+{   
+    position: absolute;
+    margin-left: 17%;
+    margin-top:11%;
+}
+
+#img4
+{   
+    position: absolute;
+    margin-left: 1%;
+    margin-right: -8%;
+    position: absolute;
+    margin-top: 33%;
+}
+
+#img5
+{
+    position: absolute;
+    margin-top: 32%;
+    margin-left: 3%;
+}
+
+#img6
+{
+    margin-left: 8%;
+    position: absolute;
+    margin-top: 33%;
+}
+
+#img7
+{
+    margin-top: 23%;
+    position: absolute;
+    margin-left: 23%;
+    margin-right: -8%;
+}
+
+#img8
+{
+    margin-top: 22%;
+    position: absolute;
+    margin-left: 18%;
+}
+
+#img9
+{
+     margin-top: 23%;
+    position: absolute;
+    margin-left: 16%;
+}
+
+#img10
+{
+    margin-top: 12%;
+    margin-left: 35%;
+    position: absolute;
+    margin-right: -8%;
+}
+
+#img11
+{
+    margin-top: 11%;
+    position: absolute;
+    margin-left: 37%;
+}
+
+#img12
+{
+    margin-left: 42%;
+    margin-top: 12%;
+    position: absolute;
+}
+
+#img13
+{
+    margin-top: 20%;
+    position: absolute;
+    margin-left: 56%;
+}
+
+#img14
+{
+    margin-top: 19%;
+    margin-left: 58%;
+    position: absolute;
+}
+
+#img15
+{
+    margin-top: 20%;
+    position: absolute;
+    margin-left: 63%;
+}
+
+#img16
+{
+    margin-top: 29%;
+    position: absolute;
+    margin-right: -8%;
+    margin-left: 38%;
+}
+
+#img17
+{
+    margin-top: 28%;
+    position: absolute;
+    margin-left: 40%;
+}
+
+#img18
+{
+    margin-top: 29%;
+    position: absolute;
+    margin-left: 45%;
+}
+
+#img19
+{
+    margin-top: 39%;
+    position: absolute;
+    margin-right: -8%;
+    margin-left: 58%;
+}
+
+#img20
+{
+    margin-top: 38%;
+    position: absolute;
+    margin-left: 60%;
+}
+
+#img21
+{
+    margin-top: 39%;
+    position: absolute;
+    margin-left: 65%;
+}
+
+#img22
+{
+    margin-top: 12%;
+    position: absolute;
+    margin-right: -8%;
+    margin-left: 73%;
+}
+
+#img23
+{
+    margin-top: 11%;
+    position: absolute;
+    margin-left: 75%;
+}
+
+#img24
+{
+    margin-top: 12%;
+    position: absolute;
+    margin-left: 80%;
+}
+
+#img25
+{
+    margin-top: 29%;
+    position: absolute;
+    margin-right: -8%;
+    margin-left: 72%;
+}
+
+#img26
+{
+    margin-top: 28%;
+    position: absolute;
+    margin-left: 74%;
+}
+
+#img27
+{
+    margin-top: 29%;
+    position: absolute;
+    margin-left: 79%;
+}
+
+#img28
+{
+    margin-top: 39%;
+    position: absolute;
+    margin-right: -8%;
+    margin-left: 21%;
+}
+
+#img29
+{
+    margin-top: 38%;
+    position: absolute;
+    margin-left: 23%;
+}
+
+#img30
+{
+    margin-top: 39%;
+    position: absolute;
+    margin-left: 28%;
+}
+    
+.bg_img {
+    position: relative;
+    animation-name: moveclouds;
+
+    animation-duration: 15s;
+    -webkit-animation-duration: 15s;
+    -moz-animation-duration: 15s;
+    -o-animation-duration: 15s;
+
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    background-size:cover;
+}
+
+@keyframes moveclouds{
+    0%   {left:0px; top:0px;}
+    50%  {left:2%; top:0px;}
+    100% {left:0px; top:0px;}
+}
+
+
+@-webkit-keyframes moveclouds{
+    0%   {left:0px; top:0px;}
+    50%  {left:2%; top:0px;}
+    100% {left:0px; top:0px;}
+}
+
+@-moz-keyframes moveclouds{
+    0%   {left:0px; top:0px;}
+    50%  {left:2%; top:0px;}
+    100% {left:0px; top:0px;}
+}
+
+@-o-keyframes moveclouds{
+    0%   {left:0px; top:0px;}
+    50%  {left:2%; top:0px;}
+    100% {left:0px; top:0px;}
+}

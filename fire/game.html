@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Game</title>
+
+	<link rel="stylesheet" type="text/css" href="index_style.css">
+	<link rel="stylesheet" type="text/css" href="sky.css" id="levelStyle">
+	<style type="text/css">
+		html, body {
+			cursor:url("../res/crosshair_cur2.png") 23 18, auto;
+		    width: 100%;
+		    height: 100%;
+		    margin: 0;
+		    padding: 0;
+		    overflow: hidden;
+		}
+	</style>
+</head>
+
+<body id="background_container" onclick="shoot();">
+
+	<!-- //////////////////////// SWITCH VIEW ////////////////////////-->
+    <!-- ************************************************************ -->
+    <div id="switchView" onclick="event.stopPropagation();">
+        <img  id="switchWord"/>
+        <img id="switchAvatar">
+        <div class="switchDiv" style="position: absolute; bottom: 13%; left: 35%;">Your Score: 
+            <span class="switchSpan" id="switchScore">100</span>
+        </div>
+        <div class="switchDiv" style="position: absolute; bottom: 2%; left: 35%;">Your time:
+            <span class="switchSpan" id="switchTime">1:00</span>
+        </div>
+       
+    </div>
+    <!-- ///////////////////// END OF SWITCH VIEW ////////////////////-->
+    <!-- ************************************************************ -->
+
+	<!-- //////////////////////// DASHBOARD ///////////////////////-->
+	<!-- ********************************************************* -->
+	<div id="dashboard">
+        <div class="levelItem" onclick="event.stopPropagation();">	
+            <img class="levelIcon" src="../res/rsz_score.png" style="margin-right: 5%;"/> 
+            <span id="score" style="font-size: 1.75vmax; color: #8f3424;">0</span>
+        </div>
+        
+        <div class="levelItem" onclick="event.stopPropagation();">
+            	<img class="levelIcon" src="../res/rsz_timer.png" style="margin-right: 5%"/> 
+            	<span id="timer" style="font-size: 1.75vmax; color: #8f3424;">0</span>
+        </div>
+
+        <div id="heart" class="levelItem" onclick="event.stopPropagation();" style="padding-top: 0.7%; padding-bottom: 0.35%">
+            <img class="levelIcon" name="hearts" src="../res/heart.png" id="lastHeart"/>
+            <img class="levelIcon" name="hearts" src="../res/heart.png"/>
+            <img class="levelIcon" name="hearts" src="../res/heart.png"/>
+        </div>
+    </div>         
+	<!-- ********************************************************* -->
+	<!-- ********************************************************* -->
+
+	<!-- ///////////////////////////////////////////// BACKGROUND \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+	<!-- *************************************************************************************************** -->
+	<div id="warning-message"> You must rotate your Phone </div>
+    <div id="wrapper">
+        <div id="sun" onclick="event.stopPropagation();"></div>    
+        <div id="clouds">
+
+        	<div id="cloud1" class="cover">
+	        	<img id="img1" src="../res/cloud2.png" class="bg_img"/>
+	            <img id="img2" src="../res/cloud3.png" class="bg_img"/>
+	            <img id="img3" src="../res/cloud2.png" class="bg_img"/>
+            </div>
+
+            <div id="cloud2">
+            	<img id="img10" src="../res/cloud2.png" class="bg_img"/>
+            	<img id="img11" src="../res/cloud3.png" class="bg_img"/>
+            	<img id="img12" src="../res/cloud2.png" class="bg_img"/>
+        	</div>
+
+            <div id="cloud3">
+            	<img id="img22" src="../res/cloud2.png" class="bg_img"/>
+            	<img id="img23" src="../res/cloud3.png" class="bg_img"/>
+            	<img id="img24" src="../res/cloud2.png" class="bg_img"/>
+            </div>
+
+            <div id="cloud4">
+	            <img id="img7" src="../res/cloud2.png" class="bg_img"/>
+	            <img id="img8" src="../res/cloud3.png" class="bg_img"/>
+	            <img id="img9" src="../res/cloud2.png" class="bg_img"/>
+	        </div>
+
+	        <div id="cloud5">
+	            <img id="img13" src="../res/cloud2.png" class="bg_img"/>
+	            <img id="img14" src="../res/cloud3.png" class="bg_img"/>
+	            <img id="img15" src="../res/cloud2.png" class="bg_img"/>
+	        </div>
+	        
+	        <div id="cloud6">
+		        <img id="img4" src="../res/cloud2.png" class="bg_img"/>
+	            <img id="img5" src="../res/cloud3.png" class="bg_img"/>
+	            <img id="img6" src="../res/cloud2.png" class="bg_img"/>
+	        </div>
+
+	        <div id="cloud7">
+	            <img id="img16" src="../res/cloud2.png" class="bg_img"/>
+	            <img id="img17" src="../res/cloud3.png" class="bg_img"/>
+	            <img id="img18" src="../res/cloud2.png" class="bg_img"/>
+	        </div>
+
+	        <div id="cloud8">
+		        <img id="img25" src="../res/cloud2.png" class="bg_img"/>
+	            <img id="img26" src="../res/cloud3.png" class="bg_img"/>
+	            <img id="img27" src="../res/cloud2.png" class="bg_img"/>
+	        </div>
+
+	        <div id="cloud9">
+	            <img id="img28" src="../res/cloud2.png" class="bg_img"/>
+	            <img id="img29" src="../res/cloud3.png" class="bg_img"/>
+	            <img id="img30" src="../res/cloud2.png" class="bg_img"/>
+            </div>
+
+            <div id="cloud10">
+	            <img id="img19" src="../res/cloud2.png" class="bg_img"/>
+	            <img id="img20" src="../res/cloud3.png" class="bg_img"/>
+	            <img id="img21" src="../res/cloud2.png" class="bg_img"/>
+	        </div>
+        </div>
+    </div>
+	<!-- ////////////////////////////////////////// END OF BACKGROUND \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+	<!-- //////////////////////// CONTROLS ////////////////////////-->
+	<!-- ********************************************************* -->
+	<img src="../res/play.png" style=" position:fixed; right:3%; top: 3%; width:3%; height:5%; cursor: default;" 
+		id="playSound" onclick= "switchSound(this); event.stopPropagation();"/>
+	<audio loop id= "gameSound">
+		<source src="../res/scaryGame.mp3" type="audio/ogg" >
+	</audio>
+	<img src="../res/pause_game.png" style=" position:fixed; right:8%; top: 3%; width:3%; height:5%; cursor: default;" 
+		id="pauseGame" onclick= "pausePlaySwitch(); event.stopPropagation();"/>
+	<!-- ********************************************************* -->
+	<!-- ********************************************************* -->
+
+	<div id="pauseWord" style="font-family: 'Times New Roman'; font-size: 12vh; font-weight: bold; 
+			text-align: center; margin-top: 30%; color: red; z-index: 10;">
+		<span style="text-shadow: 5px 3px 5px #888888;">PAUSED</span>
+	</div>
+
+	<audio id="audioShoot"><source src="../res/shootingsound.mp3"  type="audio/mp3"/></audio>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="index_script.js"></script>
+</body>
+</html>

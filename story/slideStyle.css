@@ -1,0 +1,234 @@
+/* ------------------------- story slide ----------------------- */
+html, body {
+  height:100%;
+}
+body {
+  font-size:100%;
+  margin:0;
+  background:black;
+  font-family:georgia;
+  text-align:center;
+}
+.slide{
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	border:solid 1em #000;
+	cursor: pointer;
+	height:100vh;
+}
+
+.slide table {
+	width:90%;
+	height:90%;
+	margin:auto 5%;
+	overflow:auto;
+}
+
+.slide td {
+	hieght:100%;
+	vertical-align:middle;
+}
+.slide div {
+	max-width:37.5vw;
+	margin:auto;
+}
+
+img {
+	max-width:100%; height:auto;
+	border:none; //max-height:25%;}
+
+h1 {
+	font-weight:normal;
+	font-size:3.8em;
+	font-size:5vw;
+	text-align:center;
+}
+p { 
+	font-size:1.7em;
+	font-size:2.25vw; 
+	line-height:1.4; 
+	margin:.2em auto;
+	}
+
+
+.cover{
+	background:url(storybg.png) no-repeat center center ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.p1{
+	background:url(h.png) no-repeat center center ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+	}
+.p2{
+    background:url(1.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+.p3{
+	background:url(2.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+.p4{
+	background:url(33.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	z-index: 1;
+}
+.p5{
+	background:url(finalStory.png) no-repeat center center ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	}
+
+.button {
+	display:inline-block;
+	background:black;
+	color:white;
+	padding:.75em;
+	border-radius:6px;
+	cursor:pointer;
+	transition: .25s ease-out;
+}
+
+.button:hover {
+	background:#c11;
+}
+
+
+.floating {
+	border:solid transparent;
+	animation: floating 5s ease-in-out infinite;
+}
+
+@keyframes floating {
+	50% {transform: translateY(9px);}
+}
+
+
+@media screen and (max-width:600px) {
+	body{
+	font-size:85%;
+	}
+	p {  font-size:3.5vw; }
+}
+/* ------------------------------ Story containe ----------------------------- */
+
+#storyText{
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	margin: 0 auto;
+	background: rgba(22,22,22, 0.5);
+	width: 90vw;
+	max-width: 900vw;
+	min-height: 30px;
+	border-radius: 5px;
+	/*new padding*/
+	padding: 15px 5px;
+}
+
+.fire{
+	position: absolute;
+	background: url(f.png) no-repeat center;
+	background-size: cover;
+	top: 70%;
+	width: 100%;
+	height: 30%;
+	z-index: 2;
+	animation: flash infinite;
+}
+
+
+@keyframes flash {
+	from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+  animation-duration: .75s;
+}
+
+.zoomIn {
+    animation-duration: 3s;
+    animation-name: zoomIn;
+  }
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale3d(.3, .3, .3);
+    }
+  }
+/*new style*/
+.slide.slidefire  {
+  position: relative;
+}
+.slide.slidefire div.fire.animated{
+  max-width: none;
+
+}
+.fire{
+  top:auto;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+}
+/*media queries */
+@media (min-width: 1200px) {
+                #storyText
+                {
+                     font-size:150% !important;
+                }
+    }
+@media (max-width: 1200px) {
+                #storyText
+                {
+                     font-size:80% !important;
+                }
+    }
