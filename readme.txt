@@ -1,4 +1,4 @@
-1.To start play: opean file "index.html"
+1.To start play: open file "index.html"
 2.How to play: you play with mouse by shooting evil not angle
 		each kiled evil you will gane 10 point
 		each kiled angel you lose 1 heart
